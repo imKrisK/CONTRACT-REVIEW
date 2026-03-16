@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settlement Builder - Contract Review (5555Hz)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .contract-gradient {
+            background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <nav class="contract-gradient shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <i class="fas fa-file-signature text-white text-2xl mr-3"></i>
+                    <h1 class="text-2xl font-bold text-white">Contract Review</h1>
+                    <span class="ml-3 px-3 py-1 bg-white bg-opacity-20 rounded-full text-xs text-white font-semibold">5555Hz</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="flex h-screen bg-gray-50">
+        <aside class="w-64 bg-white shadow-md">
+            <nav class="mt-5 px-4">
+                <a href="dashboard.html" class="flex items-center px-4 py-3 text-sm font-medium rounded-md text-gray-700 hover:bg-gray-100 mb-2">
+                    <i class="fas fa-home mr-3"></i>Dashboard
+                </a>
+                <a href="settlement.html" class="flex items-center px-4 py-3 text-sm font-medium rounded-md text-white bg-purple-600 mb-2">
+                    <i class="fas fa-handshake mr-3"></i>Settlement Builder
+                </a>
+            </nav>
+        </aside>
+
+        <main class="flex-1 overflow-y-auto p-8">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl font-bold text-gray-900 mb-8">Settlement Agreement Builder</h2>
+
+                <div class="bg-white rounded-lg shadow p-6 mb-6">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-4">Settlement Details</h3>
+                    <form class="space-y-4">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Case Name</label>
+                                <input type="text" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500" placeholder="Enter case name">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Settlement Amount</label>
+                                <input type="number" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500" placeholder="0.00">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Party A (Plaintiff)</label>
+                            <input type="text" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500" placeholder="Enter plaintiff name">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Party B (Defendant)</label>
+                            <input type="text" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500" placeholder="Enter defendant name">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Settlement Template</label>
+                            <select class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500">
+                                <option value="">Select template...</option>
+                                <option value="personal_injury">Personal Injury Settlement</option>
+                                <option value="employment">Employment Dispute Settlement</option>
+                                <option value="contract">Contract Dispute Settlement</option>
+                                <option value="property">Property Damage Settlement</option>
+                                <option value="custom">Custom Agreement</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="bg-white rounded-lg shadow p-6 mb-6">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-4">Key Terms</h3>
+                    <div class="space-y-3">
+                        <label class="flex items-center">
+                            <input type="checkbox" checked class="form-checkbox h-5 w-5 text-purple-600">
+                            <span class="ml-3 text-gray-700">Include release of all claims</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox" checked class="form-checkbox h-5 w-5 text-purple-600">
+                            <span class="ml-3 text-gray-700">Include confidentiality clause</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox" class="form-checkbox h-5 w-5 text-purple-600">
+                            <span class="ml-3 text-gray-700">Include non-disparagement clause</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox" class="form-checkbox h-5 w-5 text-purple-600">
+                            <span class="ml-3 text-gray-700">Include indemnification</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow p-6 mb-6">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-4">Payment Terms</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Payment Structure</label>
+                            <select class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500">
+                                <option value="lump_sum">Lump Sum</option>
+                                <option value="installments">Installments</option>
+                                <option value="structured">Structured Settlement</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Payment Deadline</label>
+                            <input type="date" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex gap-4">
+                    <button class="flex-1 px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 font-semibold">
+                        <i class="fas fa-file-signature mr-2"></i>Generate Settlement Agreement
+                    </button>
+                    <button class="px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700">
+                        <i class="fas fa-save mr-2"></i>Save Draft
+                    </button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        async function generateSettlement() {
+            const formData = {
+                case_name: document.querySelector('input[placeholder="Enter case name"]').value,
+                settlement_amount: document.querySelector('input[type="number"]').value,
+                party_a: document.querySelector('input[placeholder="Enter plaintiff name"]').value,
+                party_b: document.querySelector('input[placeholder="Enter defendant name"]').value,
+                template: document.querySelector('select[name="template"]').value
+            };
+
+            try {
+                const response = await fetch('http://localhost:5555/api/settlement/generate', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(formData)
+                });
+                if (response.ok) {
+                    alert('Settlement agreement generated successfully!');
+                }
+            } catch (error) {
+                alert('Generation failed. Please try again.');
+            }
+        }
+    </script>
+</body>
+</html>
